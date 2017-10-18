@@ -13,6 +13,7 @@ def configure(conf):
   # sudo apt-get install libgsl2 libgsl-dev libarmadillo6 libarmadillo-dev libboost-all-dev
   # or homebrew
   conf.env.LIBPATH_MYLIB = ['/usr/lib', '/usr/lib64']
+  conf.env.INCLUDES_MYLIB = ['/usr/local/include']
 
   if conf.options.mode == 'release':
     cxx_flags = ['-O3', '-fpermissive', '-std=c++11', '-march=native', '-DNDEBUG', '-fopenmp', '-DBOOST_LOG_DYN_LINK']
